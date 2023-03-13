@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mt-5 px-5  mb-5 ">
+ {% for x in video %}
+ <div class="card border border-round ms-3 mb-3" style="width: 18rem;">
+    <video  class="embed-responsive embed-responsive-16-9" src="{{x.video.url}}" type="video/mp4" controls="controls"></video>
+    <div class="card-body">
+      <h6>{{x.name}}</h6>
+      <h5 class="card-title">{{x.description}}</h5>
+    </div>
+  </div>
+ {% endfor %}
+</div>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
